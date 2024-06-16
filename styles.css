@@ -1,0 +1,272 @@
+@font-face {
+    font-family: 'MyCustomFont';
+    src: url('font.ttf') format('truetype');
+}
+
+:root {
+    --ffsd: 0px;
+    --1vw: calc((100vw - var(--sbw, 0px)) / 100);
+    --1vh: var(--inner1Vh, 1vh);
+    --rzf: 1;
+    --rfso: 1;
+    --minfs: 0px;
+    --bfso: 1;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .animated {
+        animation: none !important;
+    }
+}
+
+html {
+    font-size: max(calc(min(var(--1vw, 1vw), 13.66px) * var(--rfso, 1)), var(--minfs, 0px));
+    scroll-behavior: smooth;
+}
+
+body {
+    font-size: calc(1rem * var(--bfso, 1));
+    margin: 0;
+    padding: 0;
+    font-family: 'MyCustomFont', Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: geometricPrecision;
+    overflow-x: hidden;
+}
+
+header, main, footer {
+    padding: 20px;
+    text-align: center;
+    background-color: #f9f9f9;
+}
+
+h2 {
+    font-size: 95px;
+    color: black;
+    margin-bottom: 20px;
+}
+
+h3 {
+    align-items: center;
+    justify-content: center;
+}
+
+.content-section {
+    margin: 40px 0;
+    display: grid;
+    grid-template-areas: "left image right";
+    align-items: center;
+    position: relative;
+}
+
+.image-container {
+    grid-area: image;
+    position: relative;
+    width: 100%;
+    padding-top: 100%;
+}
+.gradient-text {
+    background: linear-gradient(56deg, rgba(153,68,255,1) 19%, rgba(90,148,207,1) 50%, rgba(21,238,151,1) 93%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.custom-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.custom-image2 {
+    width: 70%;
+    height: auto;
+    max-height: 80%;
+    object-fit: cover;
+}
+
+.principal-image {
+    width: 100%; /* Make the principal image bigger */
+    height: auto;
+    max-height: 100%;
+    object-fit: cover;
+}
+
+.text-left {
+    grid-area: left;
+    transform: rotate(-10deg);
+    color: black;
+    font-family: 'MyCustomFont', Arial, sans-serif;
+    padding-right: 10px; /* Adjust the padding as needed */
+    justify-self: end;
+    font-size: large;
+}
+
+.text-right {
+    grid-area: right;
+    transform: rotate(10deg);
+    color: black;
+    font-family: 'MyCustomFont', Arial, sans-serif;
+    padding-left: 10px; /* Adjust the padding as needed */
+    justify-self: start;
+}
+
+.ca-address {
+    grid-column: 1 / -1;
+    font-style: italic;
+    color: black;
+    font-family: 'MyCustomFont', Arial, sans-serif;
+    margin-top: 15px;
+    text-align: center;
+    font-size: 2.5rem;
+}
+
+.arrow {
+    display: block;
+    margin: 40px auto;
+    width: 120px; /* Customize the size */
+    height: auto;
+}
+
+.rotated-arrow {
+    transform: rotate(20deg);
+}
+.arrow1 {
+    display: block;
+    margin: 40px auto;
+    width: 110px; /* Customize the size */
+    height: auto;
+}
+
+.rotated-arrow1 {
+    transform: rotate(20deg);
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+h2 {
+    margin: 10px;
+}
+
+p {
+    margin: 10px 0;
+}
+
+.section-join-us {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.join-us-content {
+    flex: 1;
+    text-align: center;
+}
+
+.join-icons-grid {
+    display: inline;
+    grid-template-columns: repeat(2, 1fr); /* Adjust to 2x2 grid */
+    gap: 10px;
+    justify-items: center;
+    align-items: baseline;
+    margin-top: 10px;
+}
+
+.social-icon {
+    width: 150px; /* Customize the size */
+    height: 150px;
+}
+
+.join-us-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.section-tokenomics {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 20px;
+}
+
+.section-tokenomics .tokenomics-grid {
+    display: inline;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+    padding-top: 50px;
+}
+
+
+.section-tokenomics .tokenomics-image {
+    width: 15%;
+    height: auto;
+}
+
+.roadmap-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.roadmap-image {
+    flex: 0 0 500px;
+    height: 500px;
+    object-fit: cover;
+    margin-right: 20px;
+}
+
+.roadmap-card {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    text-align: left;
+    max-width: 600px; /* Make it less wide */
+    font-size: 1.2rem; /* Make the text bigger */
+}
+
+.roadmap-point {
+    font-size: 1.5rem; /* Change the size for points */
+    color: #333; /* Change the color for points */
+}
+
+.memes-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.memes-grid img {
+    width: 70%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.content-section h2 {
+    text-align: center;
+}
+
+@keyframes animate__fadeInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-20%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.animate__fadeInLeft {
+    animation: animate__fadeInLeft 1s ease-in-out forwards;
+}
